@@ -8,6 +8,7 @@ Script Purpose:
     Run this script to re-define the DDL structure of 'bronze' tables 
 ==============================================
 */
+
 IF OBJECT_ID ('silver.crm_cust_info', 'U') IS NOT NULL
 	DROP TABLE silver.crm_cust_info;
 GO
@@ -23,7 +24,7 @@ CREATE TABLE silver.crm_cust_info(
 	dwh_create_date DATETIME2 DEFAULT GETDATE()
 );
 GO
-  
+-- CRM tables
 IF OBJECT_ID ('silver.crm_prd_info', 'U') IS NOT NULL
 	DROP TABLE silver.crm_prd_info;
 GO
